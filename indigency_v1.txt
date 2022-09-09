@@ -1,0 +1,128 @@
+Title: Indigency "Flowchart"
+Author: James Cronin
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in Virginia.</p>
+
+
+Q(1): Do you receive state or federal public assistance other than Social Security and veterans benefits?
+A: Yes 
+	Q(1.1): ELIGIBLE
+A: No
+	Q(1.2):GOTO:household
+
+Q(household): How many people including yourself live in your household?
+A: 1
+	Q(2.1):GOTO:one
+A: 2
+	Q(2.2):GOTO:two
+A: 3
+	Q(2.3):GOTO:three
+A: 4
+	Q(2.4):GOTO:four
+A: 5
+	Q(2.5):GOTO:five
+A: 6
+	Q(2.6):GOTO:six
+A: 7
+	Q(2.7):GOTO:seven
+A: 8 
+	Q(2.8):GOTO:eight
+
+
+Q(one): Is your annual income including social security and/or veterans benefits less than or equal to $16,987.5?
+A: Yes
+	Q(3.1): ELIGIBLE
+A: No
+	Q(3.2):GOTO:onefunds
+
+Q(two): Is your annual income including social security and/or veterans benefits less than or equal to $22,887.5?
+A: Yes
+	Q(4.1): ELIGIBLE
+A: No 
+	Q(4.2):GOTO:twofunds
+
+Q(three): Is your annual income including Social Security and/or veterans benefits less than or equal to $28,787.5?
+A: Yes
+	Q(5.1): ELIGIBLE
+A: No 
+	Q(5.2):GOTO:threefunds 
+Q(four): Is your annual income including Social Security and/or veteran's benefits less than or equal to $34,687.5?
+A: Yes 
+	Q(6.1): ELIGIBLE
+A: No
+	Q(6.2):GOTO:fourfunds
+
+Q(five): Is your annual income including Social Security and/or veteran's benefits less than or equal to $40,587.5?
+A: Yes
+	Q(7.1): ELIGIBLE
+A: No
+	Q(7.2):GOTO:fivefunds
+
+Q(six): Is your annual income including Social Security and veteran's benefits less than or equal to $46,487.5?
+A: Yes
+	Q(8.1): ELIGIBLE
+A: No
+	Q(8.2):GOTO:sixfunds
+
+Q(seven): Is your annual income including Social Security and/or veteran's benefits less than or equal to $52,387.5?
+A: Yes
+	Q(9.1): ELIGIBLE
+A: No
+	Q(9.2):GOTO:sevenfunds
+
+Q(eight): Is your annual income including Social Security and/or veteran's benefits less than or equal to $58,287.5?
+A: Yes
+	Q(10.1):ELIGIBLE
+A: No
+	Q(10.2):GOTO:eightfunds
+
+Q(onefunds): Are the funds you currently have less than or equal to $16.987.5?
+A: Yes 
+	Q(11.1): ELIGIBLE
+A: No 
+	Q(11.2): INELIGIBLE, unless exceptional circumstances apply. 
+
+Q(twofunds): Are the funds you currently have less than or equal to $22,887.5?
+A: Yes
+	Q(12.1): ELIGIBLE
+A: No
+	Q(12.2): INELIGIBLE, unless excpetional circumstances apply.
+
+Q(threefunds): Are the funds you currently have less than or equal to $28,787.5?
+A: Yes
+	Q(13.1): ELIGIBLE
+A: No 
+	Q(13.2): INELIGIBLE, unless exceptional circumstances apply. 
+
+Q(fourfunds): Are the funds you currently have less than or equal to $34,687.5?
+A: Yes
+	Q(14.1): ELIGIBLE	
+A: No
+	Q(14.2): INELIGIBLE, unless exceptional circumstances apply.
+
+Q(fivefunds): Are the funds you currenlty have less than or equal to $40,587.5?
+A: Yes
+	Q(15.1): ELIGIBLE
+A: No 
+	Q(15.2): INELIGIBLE, unless exceptional circumstances apply.
+
+Q(sixfunds): Are the funds you currently have less than or equal to $46,487.5?
+A: Yes
+	Q(16.1): ELIGIBLE
+A: No 
+	Q(16.2): INELIGIBLE, unless exceptional circumstances apply. 
+
+Q(sevenfunds): Are the funds you currently have less than or equal to $52,387.5?
+A: Yes
+	Q(17.1): ELIGIBLE
+A: No
+	Q(17.2): INELIGBLE, unless exceptional circumstances apply.
+
+Q(eightfunds): Are the funds you currently have less than or equal to $58,287.5?
+A: Yes
+	Q(18.1): ELIGIBLE
+A: No
+	Q(18.2): INELIGBLE, unless exceptional circumstances apply. 
