@@ -1,0 +1,91 @@
+Author: James Cronin, Ian McCulloch, Robery Little
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in Missouri.</p>
+
+<script>
+function fedpov(house,income,percentage){
+	// Determines if your income is less than or equal to
+	// a percentage of the 2021 federal poverty guidelines
+	// for the contiguous United States. See
+	// https://aspe.hhs.gov/poverty-guidelines
+
+		var line = NaN;
+
+		if (house == 1) {
+			line = 13590;
+		} else if (house == 2) {
+			line = 18310;
+		} else if (house == 3) {
+			line = 23030;
+		} else if (house == 4) {
+			line = 27750;
+		} else if (house == 5) {
+			line = 32470;
+		} else if (house == 6) {
+			line = 37190;
+		} else if (house == 7) {
+			line = 41910;
+		} else if (house == 8) {
+			line = 46630;
+		} else if (house > 8) {
+			line = 46630 + (house-8)*4720;
+		}
+
+		if (income <= (line*(percentage/100))) {
+			return true;t bug/issue
+		} else {
+			return false;
+		}
+	}
+</script>
+
+Q(1): Do you want a court appointed lawyer?
+A: Yes
+	Q(1.1):GOTO:house
+A: No 
+	Q(1.2):[https://www.avvo.com/find-a-lawyer]
+	
+Q(house): How many people are in your household?
+X:number
+	Q(2.1):GOTO:eighteen
+
+Q(eighteen): Are you over 18 years of age? 
+A: Yes
+	Q(3.1):GOTO:spouse
+A: No
+	Q(3.2):GOTO:parents
+
+Q(spouse): Are you legally married?
+A: Yes
+	Q(marriage): What is there yearly income in after tax dollars?
+	X:number
+		Q(4.1.1):GOTO:personal
+A:No	
+	Q(4.2):GOTO:personal
+
+Q(parents): How much do your legal guardians make per year in after tax dollars?
+X:number
+	Q(5.1):GOTO:personal
+
+Q(personal): How much income did you personally bring in to your household per year in after tax dollars?
+X:number
+	Q(6.1): Have you been charged with a crime?
+	A[javascript:if (fedpov(getvar('house'),getvar('marriage')+getvar('parents')+getvar('personal'),150)){goto('qual')} else {goto('nonqual')}]: Yes
+	A: No 
+		Q(6.1.2):GOTO:nonqual
+
+Q(qual): You probably qualify as indigent because you receive public assistance. Would you like to learn more?
+A: Yes
+	Q(7.1):[https://publicdefender.mo.gov/]
+A: No
+	Q(7.2): Thank you for your time
+
+Q(nonqual): You probably do not qualify, would you like to search for private lawyers?
+A: Yes 
+	Q(8.1):[https://www.avvo.com/find-a-lawyer]
+A: No
+	Q(8.2): Thank you for your time
+	
